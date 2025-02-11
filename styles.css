@@ -1,0 +1,92 @@
+body {
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background: #ffcccb; /* Soft pink background */
+  font-family: 'Arial', sans-serif;
+  overflow: hidden;
+}
+
+.container {
+  text-align: center;
+}
+
+h1 {
+  color: #000; /* Black text */
+  font-size: 2rem;
+}
+
+input {
+  padding: 10px;
+  font-size: 1rem;
+  border: 2px solid #8b0000;
+  border-radius: 5px;
+  outline: none;
+  background: #fff;
+  color: #000;
+}
+
+#surpriseContainer {
+  display: none;
+  position: relative;
+  margin-top: 20px;
+}
+
+#hearts {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  pointer-events: none;
+}
+
+.heart {
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  background: url('images/heart.png') no-repeat center center/cover;
+  animation: float 5s infinite ease-in-out;
+}
+
+@keyframes float {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-20px); }
+}
+
+#message {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 3rem;
+  color: #8b0000; /* Dark red text */
+  opacity: 0;
+  animation: fadeIn 2s forwards;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3); /* Add a shadow to the text */
+}
+
+@keyframes fadeIn {
+  to { opacity: 1; }
+}
+
+#dancingCats {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  text-align: center;
+}
+
+#dancingCats img {
+  width: 100px;
+  margin: 0 10px;
+  animation: dance 2s infinite ease-in-out;
+}
+
+@keyframes dance {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-10px); }
+}
